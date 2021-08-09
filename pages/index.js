@@ -1,6 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
+import "tailwindcss/tailwind.css";
+
+
+export default LoggedIn;
 
 export default function Home() {
+
   return (
     <div className="container">
       <Head>
@@ -10,7 +15,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className="description">
@@ -50,12 +55,11 @@ export default function Home() {
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://falasyam.my.id"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          Fala Syam
         </a>
       </footer>
 
@@ -205,5 +209,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
