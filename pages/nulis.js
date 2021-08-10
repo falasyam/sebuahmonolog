@@ -4,7 +4,7 @@ import { useAuth } from "../firebase/AuthUserProvider";
 import Head from "next/head";
 import Link from "next/link";
 import "tailwindcss/tailwind.css";
-import { Firebase, firestore, serverTimestamp } from "../firebase/config";
+import { Firebase, firestore, serverTimestamp, auth } from "../firebase/config";
 
 const Nulis = () => {
   const { authUser, loading, signOut } = useAuth();
@@ -13,27 +13,32 @@ const Nulis = () => {
   const [isi, setIsi] = useState("");
   const isValid = isi.length > 3;
 
+  const slug = encodeURI(isi);
+
   const createPost = async (e) => {
     e.preventDefault();
-    const ref = firestore.collection("posts").doc("monolog");
+    const ref = firestore.collection("posts").doc(slug);
 
     const data = {
+      slug,
       isi,
-      published: false,
+      published: true,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     };
 
     await ref.set(data);
 
+    alert("Sukses Gan");
+
     // Imprerative navigation after doc is set
     router.push(`/nulis`);
   };
 
   // Listen for changes on loading and authUser, redirect if needed
-  useEffect(() => {
-    if (!loading && !authUser) router.push("/login");
-  }, [authUser, loading]);
+  //useEffect(() => {
+  //  if (!loading && !authUser) router.push("/login");
+  //}, [authUser, loading]);
 
   return (
     <div>
