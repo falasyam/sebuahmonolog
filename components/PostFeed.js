@@ -17,17 +17,17 @@ function PostItem({ post, admin = false }) {
           <span
             className="
                     inline-block
-                    bg-gray-200
+                    bg-green-550
                     rounded-full
                     px-3
                     py-1
                     text-sm
                     font-semibold
-                    text-gray-700
+                    text-white
                     mr-2
                   "
           >
-            #kaummonolog
+            ☻monolog
           </span>
         </div>
       </div>
