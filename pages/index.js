@@ -67,10 +67,6 @@ export default function Home(props) {
         <meta name="msapplication-navbutton-color" content="#84CC16" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#84CC16" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-        />
       </Head>
 
       <main>
