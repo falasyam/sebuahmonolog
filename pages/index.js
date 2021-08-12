@@ -5,7 +5,7 @@ import { firestore, postToJSON, fromMillis } from "../firebase/config";
 import PostFeed from "../components/PostFeed";
 import Loader from "../components/Loader";
 
-const LIMIT = 10;
+const LIMIT = 9;
 
 export async function getServerSideProps(context) {
   const postsQuery = firestore
@@ -76,7 +76,7 @@ export default function Home(props) {
             Monolog
           </h1>
         </section>
-        <section>
+        <section className="container md:pl-10">
           <div className="relative items-center justify-center justify-items-center">
             <div className="container p-10 items-center justify-center justify-items-center">
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 flex-col justify-between mx-auto">

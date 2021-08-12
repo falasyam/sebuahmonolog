@@ -8,10 +8,10 @@ export default function PostFeed({ posts, admin }) {
 
 function PostItem({ post, admin = false }) {
   return (
-    <div className="relative border border-gray-400 bg-white rounded-b">
+    <div className="relative border border-gray-400 bg-white rounded">
       <div className="p-4 flex flex-col justify-between leading-normal">
-        <div class="mb-3">
-          <p class="text-black text-base">{post.isi}</p>
+        <div className="mb-3">
+          <p className="text-black text-base">{post.isi}</p>
         </div>
         <div>
           <span

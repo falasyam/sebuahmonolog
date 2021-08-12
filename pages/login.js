@@ -25,19 +25,22 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen">
       <Head>
         <title>Masuk Gan!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-md w-full space-y-8">
-        <form className="mt-8 space-y-6" onSubmit={onSubmit}>
+      <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
+        <form
+          className="p-8 bg-white rounded flex justify-center items-center flex-col shadow-md"
+          onSubmit={onSubmit}
+        >
           {error && (
             <div className="alert flex flex-row items-center bg-red-200 p-5 rounded border-b-2 border-red-300">
               {error}
             </div>
           )}
-          <div>
+          <div className="">
             <input
               name="email"
               placeholder="Email"
@@ -46,7 +49,7 @@ export default function Login() {
               autoComplete="email"
               onChange={(event) => setEmail(event.target.value)}
               required
-              className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              className="mb-3 p-3 appearance-none rounded relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             ></input>
           </div>
           <div className="">
@@ -58,10 +61,10 @@ export default function Login() {
               autoComplete="password"
               onChange={(event) => setPassword(event.target.value)}
               required
-              className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              className="mb-3 p-3 appearance-none rounded relative block px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             ></input>
           </div>
-          <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Masuk
           </button>
         </form>
