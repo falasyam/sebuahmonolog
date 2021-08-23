@@ -5,14 +5,14 @@ import "firebase/storage";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const FirebaseCredentials = {
-  apiKey: "AIzaSyB4NtqKx1xFScXCJmtyT50KBUeOzgbcF4w",
-  authDomain: "webflsym.firebaseapp.com",
-  databaseURL: "https://webflsym.firebaseio.com",
-  projectId: "webflsym",
-  storageBucket: "webflsym.appspot.com",
-  messagingSenderId: "581356401216",
-  appId: "1:581356401216:web:e032d997a60d7bba0be5a5",
-  measurementId: "G-HHXPWGKXN5",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 
 if (!Firebase.apps.length) {
